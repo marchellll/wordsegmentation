@@ -1,11 +1,11 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "wordsegmentation",
+	"name": "Word Segmentation",
 	"version": "1.0.0",
-	"minAppVersion": "1.0.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+	"minAppVersion": "1.4.0",
+	"description": "Move, delete, and select one word at a time in languages that do not use spaces (e.g. Chinese, Japanese, Thai, etc.)",
+	"author": "Marchell",
+	"authorUrl": "https://marchell.xyz",
+	"isDesktopOnly": false,
+	"fundingUrl": "https://ko-fi.com/marchellll"
 }
