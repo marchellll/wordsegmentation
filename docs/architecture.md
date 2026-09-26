@@ -7,8 +7,8 @@ Where to look. This file is the **start** map.
 1. [`src/main.ts`](../src/main.ts) — plugin boot only: register the editor extension when `Intl.Segmenter` exists.
 2. [`src/segment.ts`](../src/segment.ts) — pure helpers: script → locale, word boundaries, word under cursor.
 3. Pick one path:
-   - **Keyboard:** `motion.ts` keymap → `segment.nextWordBoundary` → move / select / delete
-   - **Pointer:** `pointer.ts` double-click or double-tap → `segment.wordAt` → select range
+    - **Keyboard:** `motion.ts` keymap → `segment.nextWordBoundary` → move / select / delete
+    - **Pointer:** `pointer.ts` double-click or double-tap → `segment.wordAt` → select range
 
 ```
 Key / click / tap
@@ -24,27 +24,27 @@ English and other space-delimited text: helpers return `null`, and Obsidian’s 
 
 ## Folder cheat sheet
 
-| Path | Job |
-| --- | --- |
-| `src/main.ts` | Lifecycle. Keep thin. |
-| `src/segment.ts` | Locale detection + `Intl.Segmenter` on one line. |
-| `src/motion.ts` | Highest-precedence keymap for word move / select / delete. |
-| `src/pointer.ts` | Double-click (`mouseSelectionStyle`) + mobile double-tap. |
-| `tests/` | Pure-logic checks for `segment.ts`. |
-| `docs/` | Human guides. |
-| `img/demo.gif` | README demo placeholder. |
+| Path             | Job                                                        |
+| ---------------- | ---------------------------------------------------------- |
+| `src/main.ts`    | Lifecycle. Keep thin.                                      |
+| `src/segment.ts` | Locale detection + `Intl.Segmenter` on one line.           |
+| `src/motion.ts`  | Highest-precedence keymap for word move / select / delete. |
+| `src/pointer.ts` | Double-click (`mouseSelectionStyle`) + mobile double-tap.  |
+| `tests/`         | Pure-logic checks for `segment.ts`.                        |
+| `docs/`          | Human guides.                                              |
+| `img/demo.gif`   | README demo placeholder.                                   |
 
 ## Locales
 
-| Script | Locale | Notes |
-| --- | --- | --- |
-| Hiragana / Katakana | `ja` | |
-| Han + kana on the line | `ja` | |
-| Han only | `zh` | |
-| Thai | `th` | |
-| Lao | `lo` | |
-| Khmer | `km` | |
-| Myanmar | `my` | |
+| Script                 | Locale | Notes |
+| ---------------------- | ------ | ----- |
+| Hiragana / Katakana    | `ja`   |       |
+| Han + kana on the line | `ja`   |       |
+| Han only               | `zh`   |       |
+| Thai                   | `th`   |       |
+| Lao                    | `lo`   |       |
+| Khmer                  | `km`   |       |
+| Myanmar                | `my`   |       |
 
 Korean and Latin stay on Obsidian’s defaults (spaces already separate words).
 

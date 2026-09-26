@@ -18,11 +18,17 @@ Reload Obsidian and enable **Word Segmentation**.
 
 ## Scripts
 
-| Script | Purpose |
-| --- | --- |
-| `npm run build` | Typecheck + production bundle |
-| `npm run lint` | ESLint (`eslint-plugin-obsidianmd`) |
-| `npm test` | `node:test` on `tests/` |
+| Script                            | Purpose                                     |
+| --------------------------------- | ------------------------------------------- |
+| `npm run build`                   | Typecheck + production bundle               |
+| `npm run lint`                    | ESLint (`eslint-plugin-obsidianmd`)         |
+| `npm test`                        | `node:test` on `tests/`                     |
+| `npm run format` / `format:check` | Prettier                                    |
+| `npm run spellcheck`              | cspell on `src/`, `docs/`, `tests/`, README |
+
+## Husky
+
+After `npm i`, Husky installs a **pre-push** hook that runs format check, lint, test, and spellcheck. Push fails if any fail.
 
 ## PRs
 

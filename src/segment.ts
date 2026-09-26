@@ -126,11 +126,7 @@ export function nextWordBoundary(
 }
 
 /** Word under `pos` for double-click / double-tap, or null to leave alone. */
-export function wordAt(
-	lineText: string,
-	lineFrom: number,
-	pos: number,
-): WordRange | null {
+export function wordAt(lineText: string, lineFrom: number, pos: number): WordRange | null {
 	let locale = probeLocale(lineText, lineFrom, pos, true);
 	if (!locale) locale = probeLocale(lineText, lineFrom, pos, false);
 	if (!locale) return null;

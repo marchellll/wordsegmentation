@@ -8,9 +8,6 @@ export default class WordSegmentationPlugin extends Plugin {
 		// No Segmenter → nothing to register; Obsidian keeps its defaults.
 		if (!hasSegmenter()) return;
 
-		this.registerEditorExtension([
-			wordMotionExtension(),
-			...wordPointerExtension(),
-		]);
+		this.registerEditorExtension([wordMotionExtension(), ...wordPointerExtension()]);
 	}
 }

@@ -21,10 +21,7 @@ function rangeAtPos(view: EditorView, pos: number) {
  * While the button is held, `get` re-runs on move so the selection can grow
  * by whole words under the pointer.
  */
-function mouseWordStyle(
-	view: EditorView,
-	event: MouseEvent,
-): MouseSelectionStyle | null {
+function mouseWordStyle(view: EditorView, event: MouseEvent): MouseSelectionStyle | null {
 	// Left button, second click only (not single- or triple-click).
 	if (event.button !== 0 || event.detail !== 2) return null;
 
@@ -41,8 +38,7 @@ function mouseWordStyle(
 		// Called on the initial click and again while dragging.
 		get(curEvent, extend, multiple) {
 			const curPos =
-				view.posAtCoords({ x: curEvent.clientX, y: curEvent.clientY }) ??
-				startPos;
+				view.posAtCoords({ x: curEvent.clientX, y: curEvent.clientY }) ?? startPos;
 			// Prefer the word under the cursor; stay on the start word if none.
 			const curWord = rangeAtPos(view, curPos) ?? startWord;
 			// Span from the first word through the current one (word-sized drag).
@@ -126,8 +122,5 @@ function touchDoubleTapHandlers() {
 }
 
 export function wordPointerExtension() {
-	return [
-		EditorView.mouseSelectionStyle.of(mouseWordStyle),
-		touchDoubleTapHandlers(),
-	];
+	return [EditorView.mouseSelectionStyle.of(mouseWordStyle), touchDoubleTapHandlers()];
 }

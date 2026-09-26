@@ -1,10 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import {
-	localeForChar,
-	nextWordBoundary,
-	wordAt,
-} from '../src/segment.ts';
+import { localeForChar, nextWordBoundary, wordAt } from '../src/segment.ts';
 
 describe('localeForChar', () => {
 	it('returns null for Latin', () => {

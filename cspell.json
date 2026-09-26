@@ -1,0 +1,41 @@
+{
+	"version": "0.2",
+	"language": "en",
+	"ignoreRegExpList": [
+		"[\\u0E00-\\u0E7F]+",
+		"[\\u0E80-\\u0EFF]+",
+		"[\\u1000-\\u109F]+",
+		"[\\u1780-\\u17FF]+",
+		"[\\u3040-\\u30FF\\u31F0-\\u31FF\\uFF66-\\uFF9D]+",
+		"[\\u3400-\\u4DBF\\u4E00-\\u9FFF\\uF900-\\uFAFF]+"
+	],
+	"words": [
+		"wordsegmentation",
+		"esbuild",
+		"cspell",
+		"husky",
+		"obsidianmd",
+		"CodeMirror",
+		"codemirror",
+		"Hiragana",
+		"Katakana",
+		"Khmer",
+		"Myanmar",
+		"Segmenter",
+		"isWordLike",
+		"groupAt",
+		"keydown",
+		"mousedown",
+		"touchend",
+		"posAtCoords",
+		"mouseSelectionStyle",
+		"keymap",
+		"Marchell",
+		"ko-fi",
+		"marchellll",
+		"ponytail",
+		"SemVer",
+		"minAppVersion",
+		"Prec"
+	]
+}

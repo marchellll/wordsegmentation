@@ -8,7 +8,7 @@ In Japanese, Chinese, Thai, and similar scripts, words run together. Obsidian’
 
 ![Word move, word delete, and double-click selecting one word](img/demo.gif)
 
-*word move, word delete, and double-click.*
+_word move, word delete, and double-click._
 
 ## Why you’ll like it
 
@@ -19,10 +19,7 @@ In Japanese, Chinese, Thai, and similar scripts, words run together. Obsidian’
 - English and other space-separated languages behave exactly as before
 - Zero setup: no settings, no downloads, fully offline, tiny
 
-
-
 ## Shortcuts
-
 
 | Action               | macOS                                  | Windows / Linux                    |
 | -------------------- | -------------------------------------- | ---------------------------------- |
@@ -32,16 +29,11 @@ In Japanese, Chinese, Thai, and similar scripts, words run together. Obsidian’
 | Delete next word     | Option+Delete                          | Ctrl+Delete                        |
 | Select word          | Double-click or double-tap             | Double-click or double-tap         |
 
-
-
-
 ## Install
 
 1. Open **Settings → Community plugins**
 2. Select **Browse**, search for **Word Segmentation**
 3. Install and enable
-
-
 
 ## License
 
@@ -52,4 +44,3 @@ MIT — see [LICENSE](LICENSE).
 - [Architecture](docs/architecture.md)
 - [Contributing](docs/contributing.md)
 - [Releasing](docs/releasing.md)
-

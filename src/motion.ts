@@ -23,11 +23,7 @@ enum WordSelect {
 	Extend,
 }
 
-function moveByWord(
-	view: EditorView,
-	dir: WordDir,
-	select: WordSelect,
-): boolean {
+function moveByWord(view: EditorView, dir: WordDir, select: WordSelect): boolean {
 	const forward = dir === WordDir.Forward;
 	const extend = select === WordSelect.Extend;
 	const { state } = view;
@@ -39,9 +35,7 @@ function moveByWord(
 		const next = nextWordBoundary(line.text, line.from, head, forward);
 		if (next == null) return false;
 		nextRanges.push(
-			extend
-				? EditorSelection.range(range.anchor, next)
-				: EditorSelection.cursor(next),
+			extend ? EditorSelection.range(range.anchor, next) : EditorSelection.cursor(next),
 		);
 	}
 
@@ -75,27 +69,19 @@ function deleteByWord(view: EditorView, dir: WordDir): boolean {
 
 	view.dispatch({
 		changes,
-		selection: EditorSelection.create(
-			newHeads.map((h) => EditorSelection.cursor(h)),
-		),
+		selection: EditorSelection.create(newHeads.map((h) => EditorSelection.cursor(h))),
 		scrollIntoView: true,
 		userEvent: 'delete.word',
 	});
 	return true;
 }
 
-const cursorWordLeft = (view: EditorView) =>
-	moveByWord(view, WordDir.Backward, WordSelect.Move);
-const cursorWordRight = (view: EditorView) =>
-	moveByWord(view, WordDir.Forward, WordSelect.Move);
-const selectWordLeft = (view: EditorView) =>
-	moveByWord(view, WordDir.Backward, WordSelect.Extend);
-const selectWordRight = (view: EditorView) =>
-	moveByWord(view, WordDir.Forward, WordSelect.Extend);
-const deleteWordBackward = (view: EditorView) =>
-	deleteByWord(view, WordDir.Backward);
-const deleteWordForward = (view: EditorView) =>
-	deleteByWord(view, WordDir.Forward);
+const cursorWordLeft = (view: EditorView) => moveByWord(view, WordDir.Backward, WordSelect.Move);
+const cursorWordRight = (view: EditorView) => moveByWord(view, WordDir.Forward, WordSelect.Move);
+const selectWordLeft = (view: EditorView) => moveByWord(view, WordDir.Backward, WordSelect.Extend);
+const selectWordRight = (view: EditorView) => moveByWord(view, WordDir.Forward, WordSelect.Extend);
+const deleteWordBackward = (view: EditorView) => deleteByWord(view, WordDir.Backward);
+const deleteWordForward = (view: EditorView) => deleteByWord(view, WordDir.Forward);
 
 const wordKeymap: readonly KeyBinding[] = [
 	{
