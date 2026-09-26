@@ -1,7 +1,7 @@
 {
 	"id": "wordsegmentation",
 	"name": "Word Segmentation",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "1.4.0",
 	"description": "Move, delete, and select one word at a time in languages that do not use spaces (e.g. Chinese, Japanese, Thai, etc.)",
 	"author": "Marchell",

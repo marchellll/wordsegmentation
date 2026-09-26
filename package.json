@@ -1,6 +1,6 @@
 {
 	"name": "wordsegmentation",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Move, delete, and select one word at a time in languages that do not use spaces.",
 	"main": "main.js",
 	"type": "module",
